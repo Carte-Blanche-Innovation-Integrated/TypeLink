@@ -72,6 +72,52 @@ The project consists of a Django application for the backend and a React TypeScr
       node src/tools/generate-routes.js  
       ```
 
+
+#### Sample Generated Schema:
+
+```typescript
+export interface Error {
+    message: string;
+    /** @description Short code describing the error */
+    code: string;
+}
+
+export interface Item {
+    id: number;
+    name: string;
+    description: string;
+    /** Format: decimal */
+    price?: string;
+    /** Format: int64 */
+    stock?: number;
+}
+
+export interface NotFound {
+    detail: string;
+}
+
+export interface PatchedItem {
+    id?: number;
+    name?: string;
+    description?: string;
+    /** Format: decimal */
+    price?: string;
+    /** Format: int64 */
+    stock?: number;
+}
+```
+
+### Sample Generated Routes:
+
+```typescript
+export const Paths = {
+  ITEM_SET_2: '/api/v1/items/',
+  ITEM_SET_4_DETAIL: '/api/v1/items/{id}/',
+} as const;
+
+```
+
+
 This will generate TypeScript types based on the OpenAPI schema and save them to the specified file.
 
 ### Additional Notes
