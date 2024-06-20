@@ -7,4 +7,6 @@ urlpatterns = [
     path('api/v1/', include('warehouse.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema')),
+    path('', include('backend.openapi.urls', namespace='openapi')),
+
 ]
