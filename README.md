@@ -138,3 +138,6 @@ This will generate TypeScript types based on the OpenAPI schema and save them to
 - Make sure to update the OpenAPI schema and regenerate the TypeScript types whenever you make changes to your Django models or API endpoints to ensure consistency.
 - For more information on using Django Spectacular and openapi-typescript, refer to their respective documentation.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
