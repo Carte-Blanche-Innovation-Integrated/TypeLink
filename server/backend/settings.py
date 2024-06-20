@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'drf-spectacular',
+    'warehouse',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Warehouse API',
+    'DESCRIPTION': 'API for managing warehouse items',
+    'VERSION': '1.0.0',
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
