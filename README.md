@@ -66,11 +66,23 @@ The project consists of a Django application for the backend and a React TypeScr
       node src/tools/generate-types.js  
       ```
 
+
 2. **Generating TypeScript Routes**:
     - cd into the `client` folder.
       ```bash
       node src/tools/generate-routes.js  
       ```
+
+By running the above commands you will see some new files generated in your `client/src/` folder.
+```bash
+src/
+├── api-types/
+│   ├── components/
+│   │   └── schemas.d.ts
+│   ├── routeTypes.d.ts
+│   └── routePaths.ts
+```
+
 
 
 #### Sample Generated Schema:
@@ -116,6 +128,7 @@ export const Paths = {
 } as const;
 
 ```
+
 
 
 This will generate TypeScript types based on the OpenAPI schema and save them to the specified file.
